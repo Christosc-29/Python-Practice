@@ -1,8 +1,6 @@
-
 import pandas as pd
 
 sheet = pd.read_excel("users.xlsx")
-
 
 filtered_users = sheet[(sheet["Ηλικία"] > 30) & (sheet["Ενεργός"] == True)]
 print("Users over 30 and active:")
@@ -11,7 +9,7 @@ print(filtered_users)
 average_age = sheet["Ηλικία"].mean()
 print("\nAverage age of all users:", round(average_age, 2))
 
-active_users = df[df["Ενεργός"] == True]
+active_users = sheet[sheet["Ενεργός"] == True]
 average_salary = active_users["Μισθός (€)"].mean()
 print("Average salary of active users: €", round(average_salary, 2))
 
